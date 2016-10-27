@@ -1,0 +1,68 @@
+<?
+require_once ( 'config.php');
+
+mysql_connect("$ip", "$user", "$pass");
+mysql_select_db ("$mangoscharacters");
+
+$human = mysql_query ("select count(*) from characters where race = 1");
+$human = mysql_result ($human,0);
+$dwarv = mysql_query ("select count(*) from characters where race = 3");
+$dwarv = mysql_result ($dwarv,0);
+$night = mysql_query ("select count(*) from characters where race = 4");
+$night = mysql_result ($night,0);
+$gnome = mysql_query ("select count(*) from characters where race = 7");
+$gnome = mysql_result ($gnome,0);
+$draenei = mysql_query ("select count(*) from characters where race = 11");
+$draenei = mysql_result ($draenei,0);
+$orc = mysql_query ("select count(*) from characters where race = 2");
+$orc = mysql_result ($orc,0);
+$undead = mysql_query ("select count(*) from characters where race = 5");
+$undead = mysql_result ($undead,0);
+$tauren = mysql_query ("select count(*) from characters where race = 6");
+$tauren = mysql_result ($tauren,0);
+$troll = mysql_query ("select count(*) from characters where race = 8");
+$troll = mysql_result ($troll,0);
+$blood = mysql_query ("select count(*) from characters where race = 10");
+$blood = mysql_result ($blood,0);
+$druid = mysql_query ("select count(*) from characters where class = 11");
+$druid = mysql_result ($druid,0);
+$hunter = mysql_query ("select count(*) from characters where class = 3");
+$hunter = mysql_result ($hunter,0);
+$mage = mysql_query ("select count(*) from characters where class = 8");
+$mage = mysql_result ($mage,0);
+$paladin = mysql_query ("select count(*) from characters where class = 2");
+$paladin = mysql_result ($paladin,0);
+$priest = mysql_query ("select count(*) from characters where class = 5");
+$priest = mysql_result ($priest,0);
+$rogue = mysql_query ("select count(*) from characters where class = 4");
+$rogue = mysql_result ($rogue,0);
+$shaman = mysql_query ("select count(*) from characters where class = 7");
+$shaman = mysql_result ($shaman,0);
+$warlock = mysql_query ("select count(*) from characters where class = 9");
+$warlock = mysql_result ($warlock,0);
+$warrior = mysql_query ("select count(*) from characters where class = 1");
+$warrior = mysql_result ($warrior,0);
+$death = mysql_query ("select count(*) from characters where class = 6");
+$death = mysql_result ($death,0);
+
+echo "人类联盟: $human<br>";
+echo "矮人族: $dwarv<br>";
+echo "暗夜精灵: $night<br>";
+echo "侏儒: $gnome<br>";
+echo "德莱尼: $draenei<br>";
+echo "兽人族: $orc<br>";
+echo "亡灵: $undead<br>";
+echo "牛头人: $tauren<br>";
+echo "巨魔: $troll<br>";
+echo "血精灵: $blood<br><br>";
+echo "德鲁伊: $druid<br>";
+echo "猎人: $hunter<br>";
+echo "法师: $mage<br>";
+echo "圣骑士: $paladin<br>";
+echo "牧师: $priest<br>";
+echo "盗贼: $rogue<br>";
+echo "萨满: $shaman<br>";
+echo "术士: $warlock<br>";
+echo "战士: $warrior<br>";
+echo "死亡骑士: $death<br>";
+?>
